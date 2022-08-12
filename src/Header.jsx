@@ -2,9 +2,9 @@ import React from "react";
 
 function Header(){
       return (
-            <div>
+            <header>
                   <h1>Keeper App</h1>
-            </div>
+            </header>
       );
 }
 export default Header;

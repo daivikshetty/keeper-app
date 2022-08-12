@@ -1,16 +1,12 @@
 import React from "react";
 
-function whatYear(){
-      var date = new Date();
-      var year = date.getFullYear();
-      return year;
-}
-
 function Footer(){
+      const whatYear = new Date().getFullYear();
       return (
-            <div>
-                  <p>Copyright {whatYear()} - Daivik Shetty</p>
-            </div>
+            <footer>
+                  <p>Copyright© {whatYear}</p>
+                  <p>Made with ❤️ by Daivik Shetty</p>
+            </footer>
       );
 }
 
