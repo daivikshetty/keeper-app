@@ -25,8 +25,33 @@ const notes = [
       },
       {
         key: 5,
-        title: "Conditional Statements",
-        content: "Executes a set of statements only if the given conditions are satisfied."
+        title: "Holidays",
+        content: "Why do programmers always mix up Halloween and Christmas? Because Oct 31 equals Dec 25."
+      },
+      {
+        key: 6,
+        title: "Halloween",
+        content: "Why do programmers always mix up Halloween and Christmas?Because Oct 31 equals Dec 25."
+      },
+      {
+        key: 7,
+        title: "People",
+        content: "There are only 10 kinds of people in this world: those who know binary and those who don’t."
+      },
+      {
+        key: 8,
+        title: "Meat",
+        content: "A programmer walks to the butcher shop and buys a kilo of meat.An hour later he comes back upset that the butcher shortchanged him by 24 grams."
+      },
+      {
+        key: 9,
+        title: "Whooo?",
+        content: "'Knock, knock.'\n'Who’s there?'\nvery long pause….\n'Java.'"
+      },
+      {
+        key: 10,
+        title: "Science and Ingenuity",
+        content: "Programming is 10% science, 20% ingenuity, and 70% getting the ingenuity to work with the science."
       }
     ];
     
