@@ -42,7 +42,7 @@ function CreateArea() {
 
   return (
     <div>
-      <form>
+      <form className="create-note">
         <input name="title" placeholder="Title" onChange={doChange} value={newTitle}/>
         <textarea name="content" placeholder="Take a note..." rows="3" onChange={doChange} value={newContent}/>
         <button onClick={doClick}>Add</button>
