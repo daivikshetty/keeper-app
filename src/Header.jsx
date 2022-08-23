@@ -3,7 +3,7 @@ import React from "react";
 function Header(){
       return (
             <header>
-                  <h1>Google Keep Clone</h1>
+                  <h1>Google Keep</h1>
             </header>
       );
 }

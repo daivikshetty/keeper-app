@@ -33,6 +33,14 @@ function CreateArea() {
             setContent("");
       }
 
+      function deleteCard(id){
+            setNewArray(prevArray => {
+                  return prevArray.filter((noteItem, index) =>{
+                        return id!==index;
+                  })
+            })
+      }
+
   return (
     <div>
       <form>
@@ -40,16 +48,20 @@ function CreateArea() {
         <textarea name="content" placeholder="Take a note..." rows="3" onChange={doChange} value={newContent}/>
         <button onClick={doClick}>Add</button>
       </form>
-      {notes.map((notes)=>
+      {notes.map((notes, index)=>
                         <Note 
-                              key={notes.id}
+                              onDelete={deleteCard}
+                              id={index}
+                              key={index}
                               title={notes.title}
                               content={notes.content}
                         />
                   )}
-      {newArray.map((notes)=>
+      {newArray.map((notes, index)=>
                         <Note 
-                              key={notes.id}
+                              onDelete={deleteCard}
+                              id={index}
+                              key={index}
                               title={notes.title}
                               content={notes.content}
                         />
