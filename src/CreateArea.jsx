@@ -5,6 +5,7 @@ function CreateArea() {
       var [newTitle, setTitle] = useState("");
       var [newContent, setContent] = useState("");
       var [newArray, setNewArray] = useState([]);
+      var [buttonColor, setButtonColor] = useState("#f5ba13")
 
       function doChange(event){
             if(event.target.name === "title"){
@@ -32,6 +33,9 @@ function CreateArea() {
             setContent("");
       }
 
+      var isHover = false;
+
+
       function deleteCard(id){
             setNewArray(prevArray => {
                   return prevArray.filter((noteItem, index) =>{
@@ -40,12 +44,21 @@ function CreateArea() {
             })
       }
 
+      function hoverIn(){
+            setButtonColor("grey")
+      }
+        
+      function hoverOut(){
+            setButtonColor("#f5ba13")
+      }
+
+
   return (
     <div>
       <form className="create-note">
         <input name="title" placeholder="Title" onChange={doChange} value={newTitle}/>
         <textarea name="content" placeholder="Take a note..." rows="3" onChange={doChange} value={newContent}/>
-        <button onClick={doClick}>Add</button>
+        <button onClick={doClick} style={{backgroundColor:buttonColor}} onMouseOver={hoverIn} onMouseOut={hoverOut}>Add</button>
       </form>
       {newArray.map((notes, index)=>
                         <Note 
