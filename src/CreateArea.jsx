@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import notes from "./notes";
 import Note from "./Note";
 
 function CreateArea() {
@@ -18,7 +17,7 @@ function CreateArea() {
 
       function doClick(event){
             const newObject = {
-                  key: notes.length + newArray.length + 1,
+                  key: newArray.length + 1,
                   title: newTitle,
                   content: newContent
             }
@@ -48,15 +47,6 @@ function CreateArea() {
         <textarea name="content" placeholder="Take a note..." rows="3" onChange={doChange} value={newContent}/>
         <button onClick={doClick}>Add</button>
       </form>
-      {notes.map((notes, index)=>
-                        <Note 
-                              onDelete={deleteCard}
-                              id={index}
-                              key={index}
-                              title={notes.title}
-                              content={notes.content}
-                        />
-                  )}
       {newArray.map((notes, index)=>
                         <Note 
                               onDelete={deleteCard}

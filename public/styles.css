@@ -24,8 +24,8 @@ header h1 {
   font-weight: 200;
 }
 
-footer {
-  position: absolute;
+/* footer {
+  position: relative;
   text-align: center;
   bottom: 0;
   width: 100%;
@@ -35,7 +35,7 @@ footer {
 
 footer p {
   color: #ccc;
-}
+} */
 .note {
   background: #fff;
   border-radius: 7px;
@@ -102,19 +102,17 @@ form button {
   outline: none;
 }
 
+footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;     
+  clear: both;      
+  position: relative;      
+  height: 50px;      
+}
 
-    footer {
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      color: white;
-      text-align: center;
-      clear: both;
-      position: relative;
-      height: 50px;
-      margin-top: -200px;
-    }
-    
-    footer p {
-      color: #ccc;
-    }
+footer p {
+  color: #ccc;
+}
